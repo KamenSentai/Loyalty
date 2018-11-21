@@ -10,8 +10,12 @@ import UIKit
 
 class MoreViewController: UIViewController {
 
+    @IBOutlet weak var moreTableView: UITableView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        moreTableView.separatorStyle = .none
 
         // Do any additional setup after loading the view.
     }
