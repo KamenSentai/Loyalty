@@ -36,7 +36,7 @@
                         <color key="backgroundColor" red="0.96078431369999995" green="0.97254901959999995" blue="0.98039215690000003" alpha="1" colorSpace="calibratedRGB"/>
                         <viewLayoutGuide key="safeArea" id="PQr-Ze-W5v"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Accueil" image="first" id="acW-dT-cKf"/>
+                    <tabBarItem key="tabBarItem" title="Accueil" image="first" selectedImage="home" id="acW-dT-cKf"/>
                     <navigationItem key="navigationItem" id="YR2-AC-J75"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
@@ -53,7 +53,7 @@
                         <color key="backgroundColor" red="0.96078431369999995" green="0.97254901959999995" blue="0.98039215690000003" alpha="1" colorSpace="calibratedRGB"/>
                         <viewLayoutGuide key="safeArea" id="O1u-W8-tvY"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Favoris" image="second" id="cPa-gy-q4n"/>
+                    <tabBarItem key="tabBarItem" title="Favoris" image="second" selectedImage="favorite" id="cPa-gy-q4n"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
             </objects>
@@ -110,7 +110,7 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="moreLabelCell" destination="FuY-n5-o6X" id="Ux2-oW-9Is"/>
+                                            <outlet property="moreCellLabel" destination="FuY-n5-o6X" id="sEA-YT-av2"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -125,7 +125,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="N3V-Yy-03V"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Plus" image="second" id="zSd-74-EFL"/>
+                    <tabBarItem key="tabBarItem" title="Plus" image="second" selectedImage="more" id="zSd-74-EFL"/>
                     <connections>
                         <outlet property="moreTableView" destination="zTf-p6-0wW" id="NKq-65-5Fh"/>
                     </connections>
@@ -136,7 +136,10 @@
         </scene>
     </scenes>
     <resources>
+        <image name="favorite" width="30" height="26"/>
         <image name="first" width="30" height="30"/>
+        <image name="home" width="27" height="26"/>
+        <image name="more" width="25" height="13"/>
         <image name="second" width="30" height="30"/>
     </resources>
     <inferredMetricsTieBreakers>
