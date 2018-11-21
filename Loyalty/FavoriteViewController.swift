@@ -1,5 +1,5 @@
 //
-//  SecondViewController.swift
+//  FavoriteViewController.swift
 //  Loyalty
 //
 //  Created by Alain on 21/11/2018.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SecondViewController: UIViewController {
+class FavoriteViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

@@ -1,5 +1,5 @@
 //
-//  ThirdViewController.swift
+//  MoreViewController.swift
 //  Loyalty
 //
 //  Created by Alain on 21/11/2018.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ThirdViewController: UITabBarController {
+class MoreViewController: UITabBarController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
