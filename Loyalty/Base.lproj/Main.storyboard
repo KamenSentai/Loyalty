@@ -96,7 +96,7 @@
                     <connections>
                         <segue destination="9pv-A4-QxB" kind="relationship" relationship="viewControllers" id="u7Y-xg-7CH"/>
                         <segue destination="8rJ-Kc-sve" kind="relationship" relationship="viewControllers" id="lzU-1b-eKA"/>
-                        <segue destination="KVb-OJ-Xar" kind="relationship" relationship="viewControllers" id="S5g-VK-I4S"/>
+                        <segue destination="iNa-WF-vmH" kind="relationship" relationship="viewControllers" id="51v-jN-zIp"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
@@ -104,22 +104,22 @@
             <point key="canvasLocation" x="0.0" y="0.0"/>
         </scene>
         <!--Third-->
-        <scene sceneID="TXO-aa-fSF">
+        <scene sceneID="BUd-dx-Mcb">
             <objects>
-                <viewController storyboardIdentifier="MoreViewController" id="KVb-OJ-Xar" customClass="MoreViewController" customModule="Loyalty" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="Sgz-h6-8yH">
+                <viewController storyboardIdentifier="MoreViewController" id="iNa-WF-vmH" customClass="MoreViewController" customModule="Loyalty" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Yfv-NO-azE">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="Third View" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="ear-F2-Ji4">
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="Third View" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="dvU-wP-F3j">
                                 <rect key="frame" x="125.5" y="426.5" width="163" height="43"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="36"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loaded by SecondViewController" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E6k-Lu-TFD">
-                                <rect key="frame" x="99.5" y="477.5" width="215" height="17"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loaded by ThirdViewController" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="haX-QJ-QxT">
+                                <rect key="frame" x="107" y="477.5" width="200" height="17"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
@@ -127,18 +127,18 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstAttribute="centerX" secondItem="ear-F2-Ji4" secondAttribute="centerX" id="GDN-c0-q0l"/>
-                            <constraint firstAttribute="centerY" secondItem="ear-F2-Ji4" secondAttribute="centerY" id="bm1-CB-n3u"/>
-                            <constraint firstItem="E6k-Lu-TFD" firstAttribute="top" secondItem="ear-F2-Ji4" secondAttribute="bottom" constant="8" symbolic="YES" id="ov0-Qt-HHX"/>
-                            <constraint firstItem="E6k-Lu-TFD" firstAttribute="centerX" secondItem="ear-F2-Ji4" secondAttribute="centerX" id="u3b-tZ-kuf"/>
+                            <constraint firstItem="haX-QJ-QxT" firstAttribute="centerX" secondItem="dvU-wP-F3j" secondAttribute="centerX" id="94X-ig-N57"/>
+                            <constraint firstAttribute="centerY" secondItem="dvU-wP-F3j" secondAttribute="centerY" id="A1w-vW-cMm"/>
+                            <constraint firstItem="haX-QJ-QxT" firstAttribute="top" secondItem="dvU-wP-F3j" secondAttribute="bottom" constant="8" symbolic="YES" id="CAq-uN-aTi"/>
+                            <constraint firstAttribute="centerX" secondItem="dvU-wP-F3j" secondAttribute="centerX" id="GvL-fi-H2R"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="KNV-2B-AjC"/>
+                        <viewLayoutGuide key="safeArea" id="N3V-Yy-03V"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Third" image="second" id="rib-Ay-TJ0"/>
+                    <tabBarItem key="tabBarItem" title="Third" image="second" id="zSd-74-EFL"/>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="HgU-wD-X9P" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5MC-pm-mmX" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2764" y="0.0"/>
+            <point key="canvasLocation" x="2733" y="0.0"/>
         </scene>
     </scenes>
     <resources>

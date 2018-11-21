@@ -15,7 +15,7 @@
 		B5CAB21F21A5911900BE1811 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B5CAB21D21A5911900BE1811 /* LaunchScreen.storyboard */; };
 		B5CAB22A21A5911900BE1811 /* LoyaltyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5CAB22921A5911900BE1811 /* LoyaltyTests.swift */; };
 		B5CAB23521A5911900BE1811 /* LoyaltyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5CAB23421A5911900BE1811 /* LoyaltyUITests.swift */; };
-		B5CAB24321A595F500BE1811 /* MoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5CAB24221A595F500BE1811 /* MoreViewController.swift */; };
+		B5CAB24521A5989400BE1811 /* MoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5CAB24421A5989400BE1811 /* MoreViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,7 +50,7 @@
 		B5CAB23021A5911900BE1811 /* LoyaltyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LoyaltyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B5CAB23421A5911900BE1811 /* LoyaltyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoyaltyUITests.swift; sourceTree = "<group>"; };
 		B5CAB23621A5911900BE1811 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B5CAB24221A595F500BE1811 /* MoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreViewController.swift; sourceTree = "<group>"; };
+		B5CAB24421A5989400BE1811 /* MoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +101,7 @@
 		B5CAB21121A5911700BE1811 /* Loyalty */ = {
 			isa = PBXGroup;
 			children = (
+				B5CAB24421A5989400BE1811 /* MoreViewController.swift */,
 				B5CAB21221A5911700BE1811 /* AppDelegate.swift */,
 				B5CAB21421A5911700BE1811 /* HomeViewController.swift */,
 				B5CAB21621A5911700BE1811 /* FavoriteViewController.swift */,
@@ -108,7 +109,6 @@
 				B5CAB21B21A5911900BE1811 /* Assets.xcassets */,
 				B5CAB21D21A5911900BE1811 /* LaunchScreen.storyboard */,
 				B5CAB22021A5911900BE1811 /* Info.plist */,
-				B5CAB24221A595F500BE1811 /* MoreViewController.swift */,
 			);
 			path = Loyalty;
 			sourceTree = "<group>";
@@ -263,8 +263,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				B5CAB21721A5911700BE1811 /* FavoriteViewController.swift in Sources */,
+				B5CAB24521A5989400BE1811 /* MoreViewController.swift in Sources */,
 				B5CAB21321A5911700BE1811 /* AppDelegate.swift in Sources */,
-				B5CAB24321A595F500BE1811 /* MoreViewController.swift in Sources */,
 				B5CAB21521A5911700BE1811 /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
