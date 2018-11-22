@@ -17,7 +17,7 @@
 		B5CAB23521A5911900BE1811 /* LoyaltyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5CAB23421A5911900BE1811 /* LoyaltyUITests.swift */; };
 		B5CAB24521A5989400BE1811 /* MoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5CAB24421A5989400BE1811 /* MoreViewController.swift */; };
 		B5CAB24721A59D9600BE1811 /* MoreTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5CAB24621A59D9600BE1811 /* MoreTableViewCell.swift */; };
-		B5CAB24921A5C14100BE1811 /* AddCategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5CAB24821A5C14100BE1811 /* AddCategoryViewController.swift */; };
+		B5CAB24921A5C14100BE1811 /* AddCardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5CAB24821A5C14100BE1811 /* AddCardViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,7 +54,7 @@
 		B5CAB23621A5911900BE1811 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B5CAB24421A5989400BE1811 /* MoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreViewController.swift; sourceTree = "<group>"; };
 		B5CAB24621A59D9600BE1811 /* MoreTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreTableViewCell.swift; sourceTree = "<group>"; };
-		B5CAB24821A5C14100BE1811 /* AddCategoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCategoryViewController.swift; sourceTree = "<group>"; };
+		B5CAB24821A5C14100BE1811 /* AddCardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCardViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,7 +114,7 @@
 				B5CAB21D21A5911900BE1811 /* LaunchScreen.storyboard */,
 				B5CAB22021A5911900BE1811 /* Info.plist */,
 				B5CAB24621A59D9600BE1811 /* MoreTableViewCell.swift */,
-				B5CAB24821A5C14100BE1811 /* AddCategoryViewController.swift */,
+				B5CAB24821A5C14100BE1811 /* AddCardViewController.swift */,
 			);
 			path = Loyalty;
 			sourceTree = "<group>";
@@ -270,7 +270,7 @@
 			files = (
 				B5CAB21721A5911700BE1811 /* FavoriteViewController.swift in Sources */,
 				B5CAB24721A59D9600BE1811 /* MoreTableViewCell.swift in Sources */,
-				B5CAB24921A5C14100BE1811 /* AddCategoryViewController.swift in Sources */,
+				B5CAB24921A5C14100BE1811 /* AddCardViewController.swift in Sources */,
 				B5CAB24521A5989400BE1811 /* MoreViewController.swift in Sources */,
 				B5CAB21321A5911700BE1811 /* AppDelegate.swift in Sources */,
 				B5CAB21521A5911700BE1811 /* HomeViewController.swift in Sources */,

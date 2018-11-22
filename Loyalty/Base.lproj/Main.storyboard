@@ -50,43 +50,122 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T96-sK-ONx">
                                 <rect key="frame" x="364" y="125" width="30" height="30"/>
                                 <connections>
-                                    <action selector="addCategoryAction:" destination="9pv-A4-QxB" eventType="touchUpInside" id="G5a-WS-kXT"/>
+                                    <action selector="addCardAction:" destination="9pv-A4-QxB" eventType="touchUpInside" id="YhS-6m-3nd"/>
                                 </connections>
                             </button>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="Rek-3P-Rf5">
+                                <rect key="frame" x="20" y="192" width="374" height="56"/>
+                                <color key="barTintColor" red="0.96078431369999995" green="0.97254901959999995" blue="0.98039215690000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
                         </subviews>
                         <color key="backgroundColor" red="0.96078431369999995" green="0.97254901959999995" blue="0.98039215690000003" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="Dwf-eZ-Gtl" firstAttribute="centerY" secondItem="zH3-y2-5Sm" secondAttribute="centerY" id="7O1-Oj-g9n"/>
+                            <constraint firstItem="Rek-3P-Rf5" firstAttribute="top" secondItem="zH3-y2-5Sm" secondAttribute="bottom" constant="40" id="82s-Sw-fRR"/>
                             <constraint firstItem="zH3-y2-5Sm" firstAttribute="top" secondItem="PQr-Ze-W5v" secondAttribute="top" constant="40" id="HUP-2d-EV8"/>
                             <constraint firstAttribute="trailing" secondItem="Dwf-eZ-Gtl" secondAttribute="trailing" constant="20" id="Kax-Lm-1dH"/>
+                            <constraint firstItem="Rek-3P-Rf5" firstAttribute="leading" secondItem="PQr-Ze-W5v" secondAttribute="leading" constant="20" id="aQ8-h1-i31"/>
                             <constraint firstItem="zH3-y2-5Sm" firstAttribute="centerX" secondItem="PQr-Ze-W5v" secondAttribute="centerX" id="ddm-8R-9dg"/>
                             <constraint firstItem="T96-sK-ONx" firstAttribute="centerY" secondItem="Dwf-eZ-Gtl" secondAttribute="centerY" id="evf-HN-gwW"/>
                             <constraint firstItem="T96-sK-ONx" firstAttribute="width" secondItem="Dwf-eZ-Gtl" secondAttribute="width" id="pPj-h2-QBY"/>
+                            <constraint firstItem="Rek-3P-Rf5" firstAttribute="trailing" secondItem="PQr-Ze-W5v" secondAttribute="trailing" constant="-20" id="sAP-Bk-mU5"/>
                             <constraint firstItem="T96-sK-ONx" firstAttribute="height" secondItem="Dwf-eZ-Gtl" secondAttribute="height" id="t9k-ym-Pd7"/>
                             <constraint firstItem="T96-sK-ONx" firstAttribute="centerX" secondItem="Dwf-eZ-Gtl" secondAttribute="centerX" id="zlu-xi-ggh"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="PQr-Ze-W5v"/>
                     </view>
                     <navigationItem key="navigationItem" id="JYC-nk-Bkf"/>
+                    <connections>
+                        <outlet property="searchBar" destination="Rek-3P-Rf5" id="VcO-mJ-BHf"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2128" y="-860"/>
+            <point key="canvasLocation" x="2127.536231884058" y="-860.49107142857144"/>
         </scene>
-        <!--Add Category View Controller-->
+        <!--Add Card View Controller-->
         <scene sceneID="TIa-hq-8jY">
             <objects>
-                <viewController storyboardIdentifier="AddCategoryViewController" id="BdO-IO-LEB" customClass="AddCategoryViewController" customModule="Loyalty" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AddCardViewController" id="BdO-IO-LEB" customClass="AddCardViewController" customModule="Loyalty" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="CWH-Ny-RBf">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ajouter une carte" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5bk-DD-3AE">
+                                <rect key="frame" x="20" y="84" width="374" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4Kx-9F-oBm">
+                                <rect key="frame" x="0.0" y="221" width="414" height="120"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="120" id="L4k-Sd-a0l"/>
+                                </constraints>
+                            </pickerView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nous vous offrons la posibilité d’ajouter une nouvelle carte avec une de nos enseignes partenaires" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n5u-G7-xde">
+                                <rect key="frame" x="40" y="120" width="334" height="61"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.5490196078431373" green="0.5490196078431373" blue="0.5490196078431373" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="o22-YA-nyF">
+                                <rect key="frame" x="40" y="381" width="334" height="50"/>
+                                <color key="backgroundColor" red="0.92156862745098034" green="0.93333333333333335" blue="0.94117647058823528" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="OTR-b3-Wns"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="0"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jWh-mZ-i6J">
+                                <rect key="frame" x="40" y="652" width="334" height="50"/>
+                                <color key="backgroundColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="Llh-9W-CRf"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Valider"/>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="0.96078431369999995" green="0.97254901959999995" blue="0.98039215690000003" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="y7N-2o-eNP" firstAttribute="trailing" secondItem="5bk-DD-3AE" secondAttribute="trailing" constant="20" id="E0u-9g-gJ1"/>
+                            <constraint firstItem="5bk-DD-3AE" firstAttribute="top" secondItem="y7N-2o-eNP" secondAttribute="top" constant="40" id="GO0-ea-7VU"/>
+                            <constraint firstItem="4Kx-9F-oBm" firstAttribute="width" secondItem="CWH-Ny-RBf" secondAttribute="width" id="HX6-in-WST"/>
+                            <constraint firstItem="4Kx-9F-oBm" firstAttribute="top" secondItem="n5u-G7-xde" secondAttribute="bottom" constant="40" id="PdK-qc-8yZ"/>
+                            <constraint firstItem="4Kx-9F-oBm" firstAttribute="centerX" secondItem="y7N-2o-eNP" secondAttribute="centerX" id="RIw-tT-TKy"/>
+                            <constraint firstItem="y7N-2o-eNP" firstAttribute="bottom" secondItem="jWh-mZ-i6J" secondAttribute="bottom" constant="160" id="SZn-sT-Yle"/>
+                            <constraint firstItem="jWh-mZ-i6J" firstAttribute="leading" secondItem="o22-YA-nyF" secondAttribute="leading" id="c4p-2A-5DV"/>
+                            <constraint firstItem="o22-YA-nyF" firstAttribute="top" secondItem="4Kx-9F-oBm" secondAttribute="bottom" constant="40" id="gWu-de-Sjx"/>
+                            <constraint firstItem="o22-YA-nyF" firstAttribute="leading" secondItem="n5u-G7-xde" secondAttribute="leading" id="iNQ-rb-YAH"/>
+                            <constraint firstItem="o22-YA-nyF" firstAttribute="trailing" secondItem="n5u-G7-xde" secondAttribute="trailing" id="j55-oa-s7I"/>
+                            <constraint firstItem="n5u-G7-xde" firstAttribute="trailing" relation="lessThanOrEqual" secondItem="5bk-DD-3AE" secondAttribute="trailing" constant="-20" id="jFI-bp-cUA"/>
+                            <constraint firstItem="n5u-G7-xde" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="5bk-DD-3AE" secondAttribute="leading" constant="20" id="nR5-yO-R1U"/>
+                            <constraint firstItem="n5u-G7-xde" firstAttribute="top" secondItem="5bk-DD-3AE" secondAttribute="bottom" constant="15" id="sue-gd-za2"/>
+                            <constraint firstItem="5bk-DD-3AE" firstAttribute="leading" secondItem="y7N-2o-eNP" secondAttribute="leading" constant="20" id="x0b-Js-B4W"/>
+                            <constraint firstItem="jWh-mZ-i6J" firstAttribute="trailing" secondItem="o22-YA-nyF" secondAttribute="trailing" id="yda-3X-4wk"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="y7N-2o-eNP"/>
                     </view>
+                    <connections>
+                        <outlet property="cardTextField" destination="o22-YA-nyF" id="1EB-EV-VRk"/>
+                        <outlet property="categoryPicker" destination="4Kx-9F-oBm" id="bNi-i4-eTD"/>
+                        <outlet property="subtitleLabel" destination="n5u-G7-xde" id="UwB-5A-pdv"/>
+                        <outlet property="titleLabel" destination="5bk-DD-3AE" id="ZFo-uJ-dT4"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="si6-Mm-iad" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3230" y="-860"/>
+            <point key="canvasLocation" x="3228.985507246377" y="-860.49107142857144"/>
         </scene>
         <!--Favoris-->
         <scene sceneID="NYt-yw-hYA">
@@ -129,6 +208,11 @@
                         <rect key="frame" x="0.0" y="975" width="768" height="49"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="tintColor">
+                                <color key="value" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
                     </tabBar>
                     <connections>
                         <segue destination="jxU-BK-ji1" kind="relationship" relationship="viewControllers" id="mzA-W0-cfx"/>
@@ -204,4 +288,5 @@
         <image name="logo" width="60.5" height="24"/>
         <image name="more" width="25" height="13"/>
     </resources>
+    <color key="tintColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
 </document>
