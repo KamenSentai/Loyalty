@@ -134,6 +134,9 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Valider"/>
+                                <connections>
+                                    <action selector="addAction:" destination="BdO-IO-LEB" eventType="touchUpInside" id="JDE-Hm-PiG"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.96078431369999995" green="0.97254901959999995" blue="0.98039215690000003" alpha="1" colorSpace="calibratedRGB"/>
@@ -157,6 +160,7 @@
                         <viewLayoutGuide key="safeArea" id="y7N-2o-eNP"/>
                     </view>
                     <connections>
+                        <outlet property="addButton" destination="jWh-mZ-i6J" id="JSK-Md-hCX"/>
                         <outlet property="cardTextField" destination="o22-YA-nyF" id="1EB-EV-VRk"/>
                         <outlet property="categoryPicker" destination="4Kx-9F-oBm" id="bNi-i4-eTD"/>
                         <outlet property="subtitleLabel" destination="n5u-G7-xde" id="UwB-5A-pdv"/>

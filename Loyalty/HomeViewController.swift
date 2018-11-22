@@ -9,16 +9,18 @@
 import UIKit
 
 class HomeViewController: UIViewController {
-
+    
+    @IBOutlet weak var searchBar: UISearchBar!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        self.searchBar.searchBarStyle = .minimal
     }
-
-    @IBAction func addCategoryAction(_ sender: Any) {
+    
+    @IBAction func addCardAction(_ sender: Any) {
         let storyboard : UIStoryboard = UIStoryboard(name: "Main", bundle : nil)
-        let addCategoryViewController = storyboard.instantiateViewController(withIdentifier: "AddCategoryViewController") as! AddCategoryViewController
+        let addCategoryViewController = storyboard.instantiateViewController(withIdentifier: "AddCardViewController") as! AddCardViewController
         navigationController?.pushViewController(addCategoryViewController, animated: true)
     }
 }
-
