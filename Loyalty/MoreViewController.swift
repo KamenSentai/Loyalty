@@ -26,7 +26,7 @@ class MoreViewController: UIViewController, UITableViewDelegate, UITableViewData
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let moreCell = tableView.dequeueReusableCell(withIdentifier: "MoreTableViewCell", for: indexPath)as! MoreTableViewCell
+        let moreCell = tableView.dequeueReusableCell(withIdentifier: "MoreTableViewCell", for: indexPath) as! MoreTableViewCell
         
         moreCell.moreCellLabel.text = "Hello"
         

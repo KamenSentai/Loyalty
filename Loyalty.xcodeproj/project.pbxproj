@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B5C513BB21A6EAD90066F11D /* CategoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5C513BA21A6EAD90066F11D /* CategoryCollectionViewCell.swift */; };
 		B5CAB21321A5911700BE1811 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5CAB21221A5911700BE1811 /* AppDelegate.swift */; };
 		B5CAB21521A5911700BE1811 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5CAB21421A5911700BE1811 /* HomeViewController.swift */; };
 		B5CAB21721A5911700BE1811 /* FavoriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5CAB21621A5911700BE1811 /* FavoriteViewController.swift */; };
@@ -38,6 +39,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B5C513BA21A6EAD90066F11D /* CategoryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCollectionViewCell.swift; sourceTree = "<group>"; };
 		B5CAB20F21A5911700BE1811 /* Loyalty.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Loyalty.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B5CAB21221A5911700BE1811 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B5CAB21421A5911700BE1811 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -115,6 +117,7 @@
 				B5CAB22021A5911900BE1811 /* Info.plist */,
 				B5CAB24621A59D9600BE1811 /* MoreTableViewCell.swift */,
 				B5CAB24821A5C14100BE1811 /* AddCardViewController.swift */,
+				B5C513BA21A6EAD90066F11D /* CategoryCollectionViewCell.swift */,
 			);
 			path = Loyalty;
 			sourceTree = "<group>";
@@ -273,6 +276,7 @@
 				B5CAB24921A5C14100BE1811 /* AddCardViewController.swift in Sources */,
 				B5CAB24521A5989400BE1811 /* MoreViewController.swift in Sources */,
 				B5CAB21321A5911700BE1811 /* AppDelegate.swift in Sources */,
+				B5C513BB21A6EAD90066F11D /* CategoryCollectionViewCell.swift in Sources */,
 				B5CAB21521A5911700BE1811 /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
