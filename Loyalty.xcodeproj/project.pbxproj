@@ -84,6 +84,26 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B5C513BC21A760470066F11D /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				B5CAB24821A5C14100BE1811 /* AddCardViewController.swift */,
+				B5CAB21621A5911700BE1811 /* FavoriteViewController.swift */,
+				B5CAB21421A5911700BE1811 /* HomeViewController.swift */,
+				B5CAB24421A5989400BE1811 /* MoreViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		B5C513BD21A760A30066F11D /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				B5C513BA21A6EAD90066F11D /* CategoryCollectionViewCell.swift */,
+				B5CAB24621A59D9600BE1811 /* MoreTableViewCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		B5CAB20621A5911700BE1811 = {
 			isa = PBXGroup;
 			children = (
@@ -107,17 +127,13 @@
 		B5CAB21121A5911700BE1811 /* Loyalty */ = {
 			isa = PBXGroup;
 			children = (
-				B5CAB24421A5989400BE1811 /* MoreViewController.swift */,
-				B5CAB21221A5911700BE1811 /* AppDelegate.swift */,
-				B5CAB21421A5911700BE1811 /* HomeViewController.swift */,
-				B5CAB21621A5911700BE1811 /* FavoriteViewController.swift */,
+				B5C513BD21A760A30066F11D /* Views */,
+				B5C513BC21A760470066F11D /* ViewControllers */,
 				B5CAB21821A5911700BE1811 /* Main.storyboard */,
-				B5CAB21B21A5911900BE1811 /* Assets.xcassets */,
 				B5CAB21D21A5911900BE1811 /* LaunchScreen.storyboard */,
+				B5CAB21221A5911700BE1811 /* AppDelegate.swift */,
+				B5CAB21B21A5911900BE1811 /* Assets.xcassets */,
 				B5CAB22021A5911900BE1811 /* Info.plist */,
-				B5CAB24621A59D9600BE1811 /* MoreTableViewCell.swift */,
-				B5CAB24821A5C14100BE1811 /* AddCardViewController.swift */,
-				B5C513BA21A6EAD90066F11D /* CategoryCollectionViewCell.swift */,
 			);
 			path = Loyalty;
 			sourceTree = "<group>";
