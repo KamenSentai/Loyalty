@@ -9,6 +9,7 @@
 import UIKit
 
 class MoreTableViewCell: UITableViewCell {
+    
     @IBOutlet weak var moreCellLabel: UILabel!
     
     override func awakeFromNib() {

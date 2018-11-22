@@ -68,7 +68,7 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CategoryCollectionViewCell" id="poy-GZ-TpO" customClass="CategoryCollectionViewCell" customModule="Loyalty">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CategoryCollectionViewCell" id="poy-GZ-TpO" customClass="CategoryCollectionViewCell" customModule="Loyalty" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="374" height="374"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
@@ -97,6 +97,10 @@
                                             <constraint firstAttribute="trailing" relation="lessThanOrEqual" secondItem="dpA-by-7Rc" secondAttribute="trailing" constant="30" id="dIG-xi-DEv"/>
                                             <constraint firstItem="7St-yD-NGV" firstAttribute="centerX" secondItem="dpA-by-7Rc" secondAttribute="centerX" id="ucz-ZE-9Eb"/>
                                         </constraints>
+                                        <connections>
+                                            <outlet property="categoryImage" destination="7St-yD-NGV" id="0ov-2d-33C"/>
+                                            <outlet property="categoryLabel" destination="dpA-by-7Rc" id="tuj-Be-mhe"/>
+                                        </connections>
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>

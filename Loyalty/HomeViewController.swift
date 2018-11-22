@@ -41,6 +41,9 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let categoryCollectionViewCell = categoryCollectionView.dequeueReusableCell(withReuseIdentifier: "CategoryCollectionViewCell", for: indexPath) as! CategoryCollectionViewCell
         
+        categoryCollectionViewCell.categoryImage.image = UIImage(named: "logo")
+        categoryCollectionViewCell.categoryLabel.text = "Category"
+        
         categoryCollectionViewCell.backgroundColor = UIColor.white
         categoryCollectionViewCell.layer.cornerRadius = 10
         categoryCollectionViewCell.layer.shadowColor = UIColor.black.cgColor
