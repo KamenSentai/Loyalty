@@ -17,7 +17,6 @@
 		B5CAB22A21A5911900BE1811 /* LoyaltyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5CAB22921A5911900BE1811 /* LoyaltyTests.swift */; };
 		B5CAB23521A5911900BE1811 /* LoyaltyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5CAB23421A5911900BE1811 /* LoyaltyUITests.swift */; };
 		B5CAB24521A5989400BE1811 /* MoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5CAB24421A5989400BE1811 /* MoreViewController.swift */; };
-		B5CAB24721A59D9600BE1811 /* MoreTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5CAB24621A59D9600BE1811 /* MoreTableViewCell.swift */; };
 		B5CAB24921A5C14100BE1811 /* AddCardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5CAB24821A5C14100BE1811 /* AddCardViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -55,7 +54,6 @@
 		B5CAB23421A5911900BE1811 /* LoyaltyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoyaltyUITests.swift; sourceTree = "<group>"; };
 		B5CAB23621A5911900BE1811 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B5CAB24421A5989400BE1811 /* MoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreViewController.swift; sourceTree = "<group>"; };
-		B5CAB24621A59D9600BE1811 /* MoreTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreTableViewCell.swift; sourceTree = "<group>"; };
 		B5CAB24821A5C14100BE1811 /* AddCardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCardViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -99,7 +97,6 @@
 			isa = PBXGroup;
 			children = (
 				B5C513BA21A6EAD90066F11D /* CategoryCollectionViewCell.swift */,
-				B5CAB24621A59D9600BE1811 /* MoreTableViewCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -288,7 +285,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				B5CAB21721A5911700BE1811 /* FavoriteViewController.swift in Sources */,
-				B5CAB24721A59D9600BE1811 /* MoreTableViewCell.swift in Sources */,
 				B5CAB24921A5C14100BE1811 /* AddCardViewController.swift in Sources */,
 				B5CAB24521A5989400BE1811 /* MoreViewController.swift in Sources */,
 				B5CAB21321A5911700BE1811 /* AppDelegate.swift in Sources */,

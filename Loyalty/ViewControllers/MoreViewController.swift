@@ -95,12 +95,14 @@ class MoreViewController: UIViewController, UITableViewDelegate, UITableViewData
             
             if moreTableViewData[indexPath.section].userData.count > 0 {
                 
+                // Cell MoreUserTableViewCell in storyboard
                 guard let moreCell = tableView.dequeueReusableCell(withIdentifier: "MoreUserTableViewCell") else {return UITableViewCell()}
                 /* Can edit */
                 return moreCell
                 
             } else if moreTableViewData[indexPath.section].partnersData.count > 0 {
                 
+                // Cell MorePartnersTableViewCell in storyboard
                 guard let moreCell = tableView.dequeueReusableCell(withIdentifier: "MorePartnersTableViewCell") else {return UITableViewCell()}
                 /* Can edit */
                 moreCell.textLabel?.text = moreTableViewData[indexPath.section].partnersData[indexPath.row - 1]
@@ -108,10 +110,12 @@ class MoreViewController: UIViewController, UITableViewDelegate, UITableViewData
                 
             } else {
                 
+                // Cell MoreTextTableViewCell in storyboard
                 guard let moreCell = tableView.dequeueReusableCell(withIdentifier: "MoreTextTableViewCell") else {return UITableViewCell()}
                 /* Can edit */
                 moreCell.textLabel?.text = moreTableViewData[indexPath.section].textData[indexPath.row - 1]
                 return moreCell
+                
             }
         }
     }
