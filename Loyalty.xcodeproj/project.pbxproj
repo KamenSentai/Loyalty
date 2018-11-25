@@ -17,7 +17,7 @@
 		B5CAB22A21A5911900BE1811 /* LoyaltyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5CAB22921A5911900BE1811 /* LoyaltyTests.swift */; };
 		B5CAB23521A5911900BE1811 /* LoyaltyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5CAB23421A5911900BE1811 /* LoyaltyUITests.swift */; };
 		B5CAB24521A5989400BE1811 /* MoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5CAB24421A5989400BE1811 /* MoreViewController.swift */; };
-		B5CAB24921A5C14100BE1811 /* AddCardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5CAB24821A5C14100BE1811 /* AddCardViewController.swift */; };
+		B5CAB24921A5C14100BE1811 /* AddCatagoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5CAB24821A5C14100BE1811 /* AddCatagoryViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,7 +54,7 @@
 		B5CAB23421A5911900BE1811 /* LoyaltyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoyaltyUITests.swift; sourceTree = "<group>"; };
 		B5CAB23621A5911900BE1811 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B5CAB24421A5989400BE1811 /* MoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreViewController.swift; sourceTree = "<group>"; };
-		B5CAB24821A5C14100BE1811 /* AddCardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCardViewController.swift; sourceTree = "<group>"; };
+		B5CAB24821A5C14100BE1811 /* AddCatagoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCatagoryViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,7 +85,7 @@
 		B5C513BC21A760470066F11D /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				B5CAB24821A5C14100BE1811 /* AddCardViewController.swift */,
+				B5CAB24821A5C14100BE1811 /* AddCatagoryViewController.swift */,
 				B5CAB21621A5911700BE1811 /* FavoriteViewController.swift */,
 				B5CAB21421A5911700BE1811 /* HomeViewController.swift */,
 				B5CAB24421A5989400BE1811 /* MoreViewController.swift */,
@@ -285,7 +285,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B5CAB21721A5911700BE1811 /* FavoriteViewController.swift in Sources */,
-				B5CAB24921A5C14100BE1811 /* AddCardViewController.swift in Sources */,
+				B5CAB24921A5C14100BE1811 /* AddCatagoryViewController.swift in Sources */,
 				B5CAB24521A5989400BE1811 /* MoreViewController.swift in Sources */,
 				B5CAB21321A5911700BE1811 /* AppDelegate.swift in Sources */,
 				B5C513BB21A6EAD90066F11D /* CategoryCollectionViewCell.swift in Sources */,
