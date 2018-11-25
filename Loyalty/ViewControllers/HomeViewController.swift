@@ -10,6 +10,8 @@ import UIKit
 
 class HomeViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
     
+    var categoriesData: [[String: String]] = [[:]]
+    
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var categoryCollectionView: UICollectionView!
     
@@ -22,6 +24,33 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
         categoryCollectionView.dataSource = self
         
         categoryCollectionView!.contentInset = UIEdgeInsets(top: 10, left: 0, bottom: 10, right: 0)
+        
+        categoriesData = [
+            [
+                "categoryLabel": "Vêtement",
+                "categoryImage": "clothing"
+            ],
+            [
+                "categoryLabel": "Automobile",
+                "categoryImage": "automotive"
+            ],
+            [
+                "categoryLabel": "Restauration",
+                "categoryImage": "restaurant"
+            ],
+            [
+                "categoryLabel": "Décoration",
+                "categoryImage": "decoration"
+            ],
+            [
+                "categoryLabel": "Marché",
+                "categoryImage": "shopping"
+            ],
+            [
+                "categoryLabel": "Cinéma",
+                "categoryImage": "cinema"
+            ],
+        ]
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -43,14 +72,15 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 10
+        return self.categoriesData.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let categoryCollectionViewCell = categoryCollectionView.dequeueReusableCell(withReuseIdentifier: "CategoryCollectionViewCell", for: indexPath) as! CategoryCollectionViewCell
         
-        categoryCollectionViewCell.categoryImage.image = UIImage(named: "logo")
-        categoryCollectionViewCell.categoryLabel.text = "Category"
+    categoryCollectionViewCell.categoryImage.image = UIImage(named: categoriesData[indexPath.row]["categoryImage"] ?? "")
+        categoryCollectionViewCell.categoryImage.contentMode = .scaleAspectFit
+        categoryCollectionViewCell.categoryLabel.text = categoriesData[indexPath.row]["categoryLabel"]
         
         categoryCollectionViewCell.backgroundColor = UIColor.white
         categoryCollectionViewCell.layer.cornerRadius = 10
@@ -69,5 +99,8 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
         }
         
         return categoryCollectionViewCell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
     }
 }
