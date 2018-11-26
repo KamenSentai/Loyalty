@@ -12,13 +12,10 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
     
     var categoriesData: [[String: String]] = [[:]]
     
-    @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var categoryCollectionView: UICollectionView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        self.searchBar.searchBarStyle = .minimal
         
         categoryCollectionView.delegate = self
         categoryCollectionView.dataSource = self
@@ -102,5 +99,10 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let categoryController = storyboard.instantiateViewController(withIdentifier: "CategoryViewController") as! CategoryViewController
+        categoryController.categoryIndex = indexPath.row
+        
+        navigationController?.pushViewController(categoryController, animated: true)
     }
 }

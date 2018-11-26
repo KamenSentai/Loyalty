@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		B5C513BB21A6EAD90066F11D /* CategoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5C513BA21A6EAD90066F11D /* CategoryCollectionViewCell.swift */; };
+		B5C513C721AB6BB20066F11D /* CategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5C513C621AB6BB20066F11D /* CategoryViewController.swift */; };
+		B5C513C921AB7FDB0066F11D /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5C513C821AB7FDB0066F11D /* SearchBar.swift */; };
+		B5C513CB21AB8C860066F11D /* CardCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5C513CA21AB8C860066F11D /* CardCollectionViewCell.swift */; };
 		B5CAB21321A5911700BE1811 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5CAB21221A5911700BE1811 /* AppDelegate.swift */; };
 		B5CAB21521A5911700BE1811 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5CAB21421A5911700BE1811 /* HomeViewController.swift */; };
 		B5CAB21721A5911700BE1811 /* FavoriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5CAB21621A5911700BE1811 /* FavoriteViewController.swift */; };
@@ -39,6 +42,9 @@
 
 /* Begin PBXFileReference section */
 		B5C513BA21A6EAD90066F11D /* CategoryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCollectionViewCell.swift; sourceTree = "<group>"; };
+		B5C513C621AB6BB20066F11D /* CategoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryViewController.swift; sourceTree = "<group>"; };
+		B5C513C821AB7FDB0066F11D /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
+		B5C513CA21AB8C860066F11D /* CardCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardCollectionViewCell.swift; sourceTree = "<group>"; };
 		B5CAB20F21A5911700BE1811 /* Loyalty.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Loyalty.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B5CAB21221A5911700BE1811 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B5CAB21421A5911700BE1811 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -86,6 +92,7 @@
 			isa = PBXGroup;
 			children = (
 				B5CAB24821A5C14100BE1811 /* AddCatagoryViewController.swift */,
+				B5C513C621AB6BB20066F11D /* CategoryViewController.swift */,
 				B5CAB21621A5911700BE1811 /* FavoriteViewController.swift */,
 				B5CAB21421A5911700BE1811 /* HomeViewController.swift */,
 				B5CAB24421A5989400BE1811 /* MoreViewController.swift */,
@@ -96,7 +103,9 @@
 		B5C513BD21A760A30066F11D /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				B5C513CA21AB8C860066F11D /* CardCollectionViewCell.swift */,
 				B5C513BA21A6EAD90066F11D /* CategoryCollectionViewCell.swift */,
+				B5C513C821AB7FDB0066F11D /* SearchBar.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -286,9 +295,12 @@
 			files = (
 				B5CAB21721A5911700BE1811 /* FavoriteViewController.swift in Sources */,
 				B5CAB24921A5C14100BE1811 /* AddCatagoryViewController.swift in Sources */,
+				B5C513C721AB6BB20066F11D /* CategoryViewController.swift in Sources */,
 				B5CAB24521A5989400BE1811 /* MoreViewController.swift in Sources */,
 				B5CAB21321A5911700BE1811 /* AppDelegate.swift in Sources */,
+				B5C513C921AB7FDB0066F11D /* SearchBar.swift in Sources */,
 				B5C513BB21A6EAD90066F11D /* CategoryCollectionViewCell.swift in Sources */,
+				B5C513CB21AB8C860066F11D /* CardCollectionViewCell.swift in Sources */,
 				B5CAB21521A5911700BE1811 /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
