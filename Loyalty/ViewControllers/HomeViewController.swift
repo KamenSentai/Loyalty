@@ -10,7 +10,8 @@ import UIKit
 
 class HomeViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
     
-    var categoriesData: [[String: String]] = [[:]]
+    var categories: [Category] = [Category]()
+    var categoriesAdded: [Category] = [Category]()
     
     @IBOutlet weak var categoryCollectionView: UICollectionView!
     
@@ -22,32 +23,16 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
         
         categoryCollectionView!.contentInset = UIEdgeInsets(top: 10, left: 0, bottom: 10, right: 0)
         
-        categoriesData = [
-            [
-                "categoryLabel": "Vêtement",
-                "categoryImage": "clothing"
-            ],
-            [
-                "categoryLabel": "Automobile",
-                "categoryImage": "automotive"
-            ],
-            [
-                "categoryLabel": "Restauration",
-                "categoryImage": "restaurant"
-            ],
-            [
-                "categoryLabel": "Décoration",
-                "categoryImage": "decoration"
-            ],
-            [
-                "categoryLabel": "Marché",
-                "categoryImage": "shopping"
-            ],
-            [
-                "categoryLabel": "Cinéma",
-                "categoryImage": "cinema"
-            ],
-        ]
+        let categoryModel = CategoryModel()
+        categoryModel.fetchCategories { (categoriesFromJSON) in
+            self.categories = categoriesFromJSON
+            for category in self.categories {
+                if category.isAdded == true {
+                    self.categoriesAdded.append(category)
+                }
+            }
+            self.categoryCollectionView.reloadData()
+        }
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -69,22 +54,22 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return self.categoriesData.count
+        return self.categoriesAdded.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let categoryCollectionViewCell = categoryCollectionView.dequeueReusableCell(withReuseIdentifier: "CategoryCollectionViewCell", for: indexPath) as! CategoryCollectionViewCell
         
-    categoryCollectionViewCell.categoryImage.image = UIImage(named: categoriesData[indexPath.row]["categoryImage"] ?? "")
         categoryCollectionViewCell.categoryImage.contentMode = .scaleAspectFit
-        categoryCollectionViewCell.categoryLabel.text = categoriesData[indexPath.row]["categoryLabel"]
+        categoryCollectionViewCell.categoryImage.image = UIImage(named: self.categoriesAdded[indexPath.row].identifier)
+        categoryCollectionViewCell.categoryLabel.text = self.categoriesAdded[indexPath.row].category
         
         categoryCollectionViewCell.backgroundColor = UIColor.white
         categoryCollectionViewCell.layer.cornerRadius = 10
         categoryCollectionViewCell.layer.shadowColor = UIColor.black.cgColor
         categoryCollectionViewCell.layer.shadowOffset = CGSize(width: 0, height: 2.0)
         categoryCollectionViewCell.layer.shadowRadius = 5.0
-        categoryCollectionViewCell.layer.shadowOpacity = 0.25
+        categoryCollectionViewCell.layer.shadowOpacity = 0.125
         categoryCollectionViewCell.layer.masksToBounds = false
         
         if let layout = self.categoryCollectionView.collectionViewLayout as? UICollectionViewFlowLayout {
@@ -101,7 +86,7 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let categoryController = storyboard.instantiateViewController(withIdentifier: "CategoryViewController") as! CategoryViewController
-        categoryController.categoryIndex = indexPath.row
+        categoryController.category = self.categoriesAdded[indexPath.row]
         
         navigationController?.pushViewController(categoryController, animated: true)
     }

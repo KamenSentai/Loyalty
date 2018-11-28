@@ -10,7 +10,7 @@ import UIKit
 
 class CategoryViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
     
-    var categoryIndex: Int = 0
+    var category: Category = Category(category: "", identifier: "", isAdded: true, cards: [[:]])
     
     @IBOutlet weak var pageTitle: UILabel!
     @IBOutlet weak var categoryTitle: UILabel!
@@ -29,6 +29,7 @@ class CategoryViewController: UIViewController, UICollectionViewDelegate, UIColl
         self.pageTitle.font = UIFont.boldSystemFont(ofSize: 24.0)
         
         self.categoryTitle.font = UIFont.boldSystemFont(ofSize: 20.0)
+        self.categoryTitle.text = self.category.category
 
     }
     
@@ -44,7 +45,7 @@ class CategoryViewController: UIViewController, UICollectionViewDelegate, UIColl
         cardCollectionViewCell.layer.shadowColor = UIColor.black.cgColor
         cardCollectionViewCell.layer.shadowOffset = CGSize(width: 0, height: 2.0)
         cardCollectionViewCell.layer.shadowRadius = 5.0
-        cardCollectionViewCell.layer.shadowOpacity = 0.25
+        cardCollectionViewCell.layer.shadowOpacity = 0.125
         cardCollectionViewCell.layer.masksToBounds = false
         
         if let layout = self.cardCollectionView.collectionViewLayout as? UICollectionViewFlowLayout {

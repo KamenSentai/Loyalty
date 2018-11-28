@@ -30,7 +30,7 @@
         <!--Home View Controller-->
         <scene sceneID="hNz-n2-bh7">
             <objects>
-                <viewController storyboardIdentifier="HomeViewController" id="9pv-A4-QxB" customClass="HomeViewController" customModule="Loyalty" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="HomeViewController" id="9pv-A4-QxB" customClass="HomeViewController" customModule="Loyalty" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="tsR-hK-woN">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -62,7 +62,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </searchBar>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="4C4-mE-0La">
-                                <rect key="frame" x="20" y="272" width="374" height="501"/>
+                                <rect key="frame" x="20" y="272" width="374" height="541"/>
                                 <color key="backgroundColor" red="0.96078431369999995" green="0.97254901959999995" blue="0.98039215690000003" alpha="1" colorSpace="calibratedRGB"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="tNi-Nc-SKn">
                                     <size key="itemSize" width="374" height="374"/>
@@ -112,7 +112,7 @@
                         <constraints>
                             <constraint firstItem="Dwf-eZ-Gtl" firstAttribute="centerY" secondItem="zH3-y2-5Sm" secondAttribute="centerY" id="7O1-Oj-g9n"/>
                             <constraint firstItem="Rek-3P-Rf5" firstAttribute="top" secondItem="zH3-y2-5Sm" secondAttribute="bottom" constant="40" id="82s-Sw-fRR"/>
-                            <constraint firstItem="PQr-Ze-W5v" firstAttribute="bottom" secondItem="4C4-mE-0La" secondAttribute="bottom" constant="40" id="Fq7-oc-bXh"/>
+                            <constraint firstItem="PQr-Ze-W5v" firstAttribute="bottom" secondItem="4C4-mE-0La" secondAttribute="bottom" id="Fq7-oc-bXh"/>
                             <constraint firstItem="zH3-y2-5Sm" firstAttribute="top" secondItem="PQr-Ze-W5v" secondAttribute="top" constant="40" id="HUP-2d-EV8"/>
                             <constraint firstAttribute="trailing" secondItem="Dwf-eZ-Gtl" secondAttribute="trailing" constant="20" id="Kax-Lm-1dH"/>
                             <constraint firstItem="4C4-mE-0La" firstAttribute="top" secondItem="Rek-3P-Rf5" secondAttribute="bottom" constant="30" id="ThJ-eX-CHP"/>
@@ -165,12 +165,10 @@
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jWh-mZ-i6J">
                                 <rect key="frame" x="40" y="652" width="334" height="50"/>
-                                <color key="backgroundColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="Llh-9W-CRf"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Valider"/>
                                 <connections>
                                     <action selector="addAction:" destination="BdO-IO-LEB" eventType="touchUpInside" id="rOy-hq-54N"/>
@@ -373,7 +371,6 @@
         <!--Category View Controller-->
         <scene sceneID="QjY-K2-hba">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="GQd-wd-QsW" sceneMemberID="firstResponder"/>
                 <viewController storyboardIdentifier="CategoryViewController" id="Gae-OL-A5R" customClass="CategoryViewController" customModule="Loyalty" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="aUC-Gl-DoU">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
@@ -397,7 +394,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </searchBar>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Uye-gk-wub">
-                                <rect key="frame" x="10" y="276" width="394" height="546"/>
+                                <rect key="frame" x="10" y="276" width="394" height="586"/>
                                 <color key="backgroundColor" red="0.96078431369999995" green="0.97254901959999995" blue="0.98039215690000003" alpha="1" colorSpace="calibratedRGB"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="z9q-ld-Sbz">
                                     <size key="itemSize" width="374" height="374"/>
@@ -433,7 +430,7 @@
                         <constraints>
                             <constraint firstItem="BL2-CD-3un" firstAttribute="trailing" secondItem="kjP-Iu-yxd" secondAttribute="trailing" constant="-20" id="44D-os-49J"/>
                             <constraint firstItem="imZ-vd-8OQ" firstAttribute="top" secondItem="kjP-Iu-yxd" secondAttribute="top" constant="40" id="9Ri-kn-7CE"/>
-                            <constraint firstItem="kjP-Iu-yxd" firstAttribute="bottom" secondItem="Uye-gk-wub" secondAttribute="bottom" constant="40" id="Awy-3b-RsB"/>
+                            <constraint firstItem="kjP-Iu-yxd" firstAttribute="bottom" secondItem="Uye-gk-wub" secondAttribute="bottom" id="Awy-3b-RsB"/>
                             <constraint firstItem="BL2-CD-3un" firstAttribute="top" secondItem="imZ-vd-8OQ" secondAttribute="bottom" constant="40" id="CyG-Oo-Odx"/>
                             <constraint firstItem="2jf-Uf-gG6" firstAttribute="height" secondItem="FAz-s5-wx7" secondAttribute="height" multiplier="1.5" id="Dtg-b9-RYf"/>
                             <constraint firstItem="qLK-Zv-UPL" firstAttribute="leading" secondItem="BL2-CD-3un" secondAttribute="leading" id="Jww-cr-ShS"/>
@@ -459,6 +456,7 @@
                         <outlet property="pageTitle" destination="imZ-vd-8OQ" id="aWM-gF-gOw"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GQd-wd-QsW" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="4256.521739130435" y="-860.49107142857144"/>
         </scene>

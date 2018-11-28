@@ -8,34 +8,6 @@
 
 import UIKit
 
-extension UIColor {
-    public convenience init?(hexString: String) {
-        let r, g, b, a: CGFloat
-        
-        if hexString.hasPrefix("#") {
-            let start = hexString.index(hexString.startIndex, offsetBy: 1)
-            let hexColor = String(hexString[start...])
-            
-            if hexColor.count == 8 {
-                let scanner = Scanner(string: hexColor)
-                var hexNumber: UInt64 = 0
-                
-                if scanner.scanHexInt64(&hexNumber) {
-                    r = CGFloat((hexNumber & 0xff000000) >> 24) / 255
-                    g = CGFloat((hexNumber & 0x00ff0000) >> 16) / 255
-                    b = CGFloat((hexNumber & 0x0000ff00) >> 8) / 255
-                    a = CGFloat(hexNumber & 0x000000ff) / 255
-                    
-                    self.init(red: r, green: g, blue: b, alpha: a)
-                    return
-                }
-            }
-        }
-        return nil
-    }
-}
-
-
 class AddCatagoryViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
     
     var pickerData: [String] = [String]()
@@ -65,14 +37,14 @@ class AddCatagoryViewController: UIViewController, UIPickerViewDelegate, UIPicke
         
         self.titleLabel.font = UIFont.boldSystemFont(ofSize: 20.0)
         self.subtitleLabel.font = UIFont.systemFont(ofSize: 16.0)
-        self.subtitleLabel.textColor = UIColor(hexString: "#8c8c8cff")
+        self.subtitleLabel.textColor = UIColor(red: 0.55, green: 0.55, blue: 0.55, alpha: 1.0)
         
         self.categoryPicker.delegate = self
         self.categoryPicker.dataSource = self
         
         self.addButton.layer.cornerRadius = 10
-        self.addButton.backgroundColor = UIColor(hexString: "#ff2d55ff")
-        self.addButton.titleLabel?.textColor = UIColor(hexString: "#ffffffff")
+        self.addButton.backgroundColor = UIColor(red: 1.0, green: 0.18, blue: 0.33, alpha: 1.0)
+        self.addButton.tintColor = UIColor(white: 1.0, alpha: 1.0)
     }
     
     override func didReceiveMemoryWarning() {
