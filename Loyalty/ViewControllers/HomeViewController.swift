@@ -10,23 +10,57 @@ import UIKit
 
 class HomeViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
     
-    @IBOutlet weak var searchBar: UISearchBar!
+    var categoriesData: [[String: String]] = [[:]]
+    
     @IBOutlet weak var categoryCollectionView: UICollectionView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.searchBar.searchBarStyle = .minimal
-        
         categoryCollectionView.delegate = self
         categoryCollectionView.dataSource = self
         
         categoryCollectionView!.contentInset = UIEdgeInsets(top: 10, left: 0, bottom: 10, right: 0)
+        
+        categoriesData = [
+            [
+                "categoryLabel": "Vêtement",
+                "categoryImage": "clothing"
+            ],
+            [
+                "categoryLabel": "Automobile",
+                "categoryImage": "automotive"
+            ],
+            [
+                "categoryLabel": "Restauration",
+                "categoryImage": "restaurant"
+            ],
+            [
+                "categoryLabel": "Décoration",
+                "categoryImage": "decoration"
+            ],
+            [
+                "categoryLabel": "Marché",
+                "categoryImage": "shopping"
+            ],
+            [
+                "categoryLabel": "Cinéma",
+                "categoryImage": "cinema"
+            ],
+        ]
     }
     
-    @IBAction func addCardAction(_ sender: Any) {
+    override func viewWillAppear(_ animated: Bool) {
+        self.navigationController?.setNavigationBarHidden(true, animated: false)
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        self.navigationController?.setNavigationBarHidden(false, animated: false)
+    }
+    
+    @IBAction func addCategoryAction(_ sender: Any) {
         let storyboard : UIStoryboard = UIStoryboard(name: "Main", bundle : nil)
-        let addCategoryViewController = storyboard.instantiateViewController(withIdentifier: "AddCardViewController") as! AddCardViewController
+        let addCategoryViewController = storyboard.instantiateViewController(withIdentifier: "AddCatagoryViewController") as! AddCatagoryViewController
         navigationController?.pushViewController(addCategoryViewController, animated: true)
     }
     
@@ -35,14 +69,15 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 10
+        return self.categoriesData.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let categoryCollectionViewCell = categoryCollectionView.dequeueReusableCell(withReuseIdentifier: "CategoryCollectionViewCell", for: indexPath) as! CategoryCollectionViewCell
         
-        categoryCollectionViewCell.categoryImage.image = UIImage(named: "logo")
-        categoryCollectionViewCell.categoryLabel.text = "Category"
+    categoryCollectionViewCell.categoryImage.image = UIImage(named: categoriesData[indexPath.row]["categoryImage"] ?? "")
+        categoryCollectionViewCell.categoryImage.contentMode = .scaleAspectFit
+        categoryCollectionViewCell.categoryLabel.text = categoriesData[indexPath.row]["categoryLabel"]
         
         categoryCollectionViewCell.backgroundColor = UIColor.white
         categoryCollectionViewCell.layer.cornerRadius = 10
@@ -61,5 +96,13 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
         }
         
         return categoryCollectionViewCell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let categoryController = storyboard.instantiateViewController(withIdentifier: "CategoryViewController") as! CategoryViewController
+        categoryController.categoryIndex = indexPath.row
+        
+        navigationController?.pushViewController(categoryController, animated: true)
     }
 }
