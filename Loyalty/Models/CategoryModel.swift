@@ -1,5 +1,5 @@
 //
-//  CategoriesModel.swift
+//  CategoryModel.swift
 //  Loyalty
 //
 //  Created by Alain on 28/11/2018.
@@ -10,26 +10,27 @@ import UIKit
 import Alamofire
 import SwiftyJSON
 
-class CategoriesModel: NSObject {
+class CategoryModel: NSObject {
     
     func fetchCategories(completionHandler: @escaping ([Category]) -> ()) {
-        let url = "http://private-2114d-loyaltyhetic.apiary-mock.com/categories"
+        let url = "http://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc&api_key=c1ac741d5dd740f9861e794c5363b0c2"
         
         Alamofire.request(url).responseJSON { (response) in
             if let realData = response.data {
                 let json = JSON(realData)
                 
-                let movieListJSON = json["results"].arrayValue
+                let categoryListJSON = json["categories"].arrayValue
+                print("json ::::: \(json)")
                 
-                var movies:[Movie] = [Movie]()
+                var categories: [Category] = [Category]()
                 
-                for movieJSON in movieListJSON {
-                    let movie = Movie(json: movieJSON)
-                    
-                    movies.append(movie)
+                for categoryJSON in categoryListJSON {
+                    let category = Category(json: categoryJSON)
+
+                    categories.append(category)
                 }
                 
-                completionHandler(movies)
+                completionHandler(categories)
             }
         }
     }

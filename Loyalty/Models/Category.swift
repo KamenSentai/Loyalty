@@ -7,7 +7,11 @@
 //
 
 import UIKit
+import SwiftyJSON
 
 class Category: NSObject {
 
+    
+    init(json: JSON) {
+    }
 }
