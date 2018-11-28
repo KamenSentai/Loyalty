@@ -12,12 +12,16 @@ import SwiftyJSON
 class Category: NSObject {
     var category: String = ""
     var identifier: String = ""
+    var leftColor: String = ""
+    var rightColor: String = ""
     var isAdded: Bool = false
     var cards: [[String: Any]] = [[:]]
     
-    init(category: String, identifier: String, isAdded: Bool, cards: [[String: Any]]) {
+    init(category: String, identifier: String, leftColor: String, rightColor: String, isAdded: Bool, cards: [[String: Any]]) {
         self.category = category
         self.identifier = identifier
+        self.leftColor = leftColor
+        self.rightColor = rightColor
         self.isAdded = isAdded
         self.cards = cards
     }
@@ -25,6 +29,8 @@ class Category: NSObject {
     init(json: JSON) {
         self.category = json["category"].stringValue
         self.identifier = json["identifier"].stringValue
+        self.leftColor = json["leftColor"].stringValue
+        self.rightColor = json["rightColor"].stringValue
         self.isAdded = json["isAdded"].boolValue
         
         if self.isAdded == true {
