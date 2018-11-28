@@ -10,7 +10,7 @@ import UIKit
 
 class AddCatagoryViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
     
-    var pickerData: [String] = [String]()
+    var categoriesNotAdded: [Category] = [Category]()
     var pickerIndex: Int = 0
 
     @IBOutlet weak var titleLabel: UILabel!
@@ -22,18 +22,6 @@ class AddCatagoryViewController: UIViewController, UIPickerViewDelegate, UIPicke
         super.viewDidLoad()
         
         self.navigationController?.navigationBar.topItem?.title = "Catégories"
-        
-        pickerData = [
-            "Vêtement",
-            "Automobile",
-            "Restauration",
-            "Décoration",
-            "Marché",
-            "Cinéma",
-            "Technologie",
-            "Musée",
-            "École"
-        ]
         
         self.titleLabel.font = UIFont.boldSystemFont(ofSize: 20.0)
         self.subtitleLabel.font = UIFont.systemFont(ofSize: 16.0)
@@ -56,11 +44,11 @@ class AddCatagoryViewController: UIViewController, UIPickerViewDelegate, UIPicke
     }
     
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return pickerData.count
+        return categoriesNotAdded.count
     }
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        return pickerData[row]
+        return categoriesNotAdded[row].category
     }
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
@@ -69,13 +57,13 @@ class AddCatagoryViewController: UIViewController, UIPickerViewDelegate, UIPicke
     
     @IBAction func addAction(_ sender: Any) {
         
-        let alert = UIAlertController(title: "Catégorie créée", message: "La catégorie \(pickerData[pickerIndex]) a été créée avec succès.", preferredStyle: UIAlertController.Style.alert)
+        let alert = UIAlertController(title: "Catégorie créée", message: "La catégorie \(categoriesNotAdded[pickerIndex].category) a été créée avec succès.", preferredStyle: UIAlertController.Style.alert)
         
         alert.addAction(UIAlertAction(title: "Ok", style: UIAlertAction.Style.default) { (action: UIAlertAction!) -> Void in
             
-            self.pickerData.remove(at: self.pickerIndex)
+            self.categoriesNotAdded.remove(at: self.pickerIndex)
             
-            if self.pickerData.count == 0 {
+            if self.categoriesNotAdded.count == 0 {
                 self.navigationController?.popViewController(animated: true)
             } else {
                 self.categoryPicker.reloadAllComponents()

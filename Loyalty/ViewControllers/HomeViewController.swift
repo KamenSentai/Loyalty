@@ -12,6 +12,7 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
     
     var categories: [Category] = [Category]()
     var categoriesAdded: [Category] = [Category]()
+    var categoriesNotAdded: [Category] = [Category]()
     
     @IBOutlet weak var categoryCollectionView: UICollectionView!
     
@@ -29,6 +30,8 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
             for category in self.categories {
                 if category.isAdded == true {
                     self.categoriesAdded.append(category)
+                } else {
+                    self.categoriesNotAdded.append(category)
                 }
             }
             self.categoryCollectionView.reloadData()
@@ -46,6 +49,7 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
     @IBAction func addCategoryAction(_ sender: Any) {
         let storyboard : UIStoryboard = UIStoryboard(name: "Main", bundle : nil)
         let addCategoryViewController = storyboard.instantiateViewController(withIdentifier: "AddCatagoryViewController") as! AddCatagoryViewController
+        addCategoryViewController.categoriesNotAdded = self.categoriesNotAdded
         navigationController?.pushViewController(addCategoryViewController, animated: true)
     }
     
