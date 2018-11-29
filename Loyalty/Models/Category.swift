@@ -43,7 +43,7 @@ class Category: NSObject {
                 let date = cardData["date"].stringValue
                 let points = cardData["points"].intValue
                 let total = cardData["total"].intValue
-                let isFavorite = cardData["isFavorite"].intValue
+                let isFavorite = cardData["isFavorite"].boolValue
                 let card: [String: Any] = [
                     "name": name,
                     "id": id,

@@ -32,12 +32,11 @@ class CategoryViewController: UIViewController, UICollectionViewDelegate, UIColl
         cardCollectionView.delegate = self
         cardCollectionView.dataSource = self
         
-        cardCollectionView!.contentInset = UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)
+        self.cardCollectionView!.contentInset = UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)
         
         self.navigationController?.navigationBar.topItem?.title = "Catégories"
         
         self.pageTitle.font = UIFont.boldSystemFont(ofSize: 24.0)
-        
         self.categoryTitle.font = UIFont.boldSystemFont(ofSize: 20.0)
         self.categoryTitle.text = self.category.category
 

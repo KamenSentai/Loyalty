@@ -8,17 +8,28 @@
 
 import UIKit
 
-class HomeViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
+extension String {
+    static func ~= (lhs: String, rhs: String) -> Bool {
+        guard let regex = try? NSRegularExpression(pattern: rhs) else { return false }
+        let range = NSRange(location: 0, length: lhs.utf16.count)
+        return regex.firstMatch(in: lhs, options: [], range: range) != nil
+    }
+}
+
+class HomeViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UISearchBarDelegate {
     
     var categories: [Category] = [Category]()
     var categoriesAdded: [Category] = [Category]()
     var categoriesNotAdded: [Category] = [Category]()
+    var categoriesDisplayed: [Category] = [Category]()
     
+    @IBOutlet weak var searchBar: SearchBar!
     @IBOutlet weak var categoryCollectionView: UICollectionView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        searchBar.delegate = self
         categoryCollectionView.delegate = self
         categoryCollectionView.dataSource = self
         
@@ -34,6 +45,7 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
                     self.categoriesNotAdded.append(category)
                 }
             }
+            self.categoriesDisplayed = self.categoriesAdded
             self.categoryCollectionView.reloadData()
         }
     }
@@ -44,6 +56,22 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
     
     override func viewWillDisappear(_ animated: Bool) {
         self.navigationController?.setNavigationBarHidden(false, animated: false)
+    }
+    
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        self.categoriesDisplayed.removeAll()
+        if searchText == "" {
+            self.categoriesDisplayed = self.categoriesAdded
+        } else {
+            let pattern = "\(searchText.lowercased())"
+            for categoryAdded in self.categoriesAdded {
+                let string = categoryAdded.category.lowercased()
+                if string ~= pattern {
+                    self.categoriesDisplayed.append(categoryAdded)
+                }
+            }
+        }
+        self.categoryCollectionView.reloadData()
     }
     
     @IBAction func addCategoryAction(_ sender: Any) {
@@ -58,15 +86,15 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return self.categoriesAdded.count
+        return self.categoriesDisplayed.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let categoryCollectionViewCell = categoryCollectionView.dequeueReusableCell(withReuseIdentifier: "CategoryCollectionViewCell", for: indexPath) as! CategoryCollectionViewCell
         
         categoryCollectionViewCell.categoryImage.contentMode = .scaleAspectFit
-        categoryCollectionViewCell.categoryImage.image = UIImage(named: self.categoriesAdded[indexPath.row].identifier)
-        categoryCollectionViewCell.categoryLabel.text = self.categoriesAdded[indexPath.row].category
+        categoryCollectionViewCell.categoryImage.image = UIImage(named: self.categoriesDisplayed[indexPath.row].identifier)
+        categoryCollectionViewCell.categoryLabel.text = self.categoriesDisplayed[indexPath.row].category
         
         categoryCollectionViewCell.backgroundColor = UIColor.white
         categoryCollectionViewCell.layer.cornerRadius = 10
@@ -90,7 +118,7 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let categoryController = storyboard.instantiateViewController(withIdentifier: "CategoryViewController") as! CategoryViewController
-        categoryController.category = self.categoriesAdded[indexPath.row]
+        categoryController.category = self.categoriesDisplayed[indexPath.row]
         
         navigationController?.pushViewController(categoryController, animated: true)
     }
