@@ -194,7 +194,7 @@
                     </view>
                     <connections>
                         <outlet property="addButton" destination="jWh-mZ-i6J" id="OHB-vu-Vy8"/>
-                        <outlet property="categoryPicker" destination="4Kx-9F-oBm" id="bNi-i4-eTD"/>
+                        <outlet property="categoryPicker" destination="4Kx-9F-oBm" id="u1e-8W-7Eg"/>
                         <outlet property="subtitleLabel" destination="n5u-G7-xde" id="UwB-5A-pdv"/>
                         <outlet property="titleLabel" destination="5bk-DD-3AE" id="ZFo-uJ-dT4"/>
                     </connections>
@@ -371,7 +371,6 @@
         <!--Category View Controller-->
         <scene sceneID="QjY-K2-hba">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="GQd-wd-QsW" sceneMemberID="firstResponder"/>
                 <viewController storyboardIdentifier="CategoryViewController" id="Gae-OL-A5R" customClass="CategoryViewController" customModule="Loyalty" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="aUC-Gl-DoU">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
@@ -531,6 +530,7 @@
                         <outlet property="pageTitle" destination="imZ-vd-8OQ" id="aWM-gF-gOw"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GQd-wd-QsW" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="4256.521739130435" y="-860.49107142857144"/>
         </scene>

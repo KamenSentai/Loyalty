@@ -13,6 +13,7 @@
 		B5C513CB21AB8C860066F11D /* CardCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5C513CA21AB8C860066F11D /* CardCollectionViewCell.swift */; };
 		B5C513CE21AEEDE10066F11D /* CategoryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5C513CD21AEEDE10066F11D /* CategoryModel.swift */; };
 		B5C513D021AEF0A50066F11D /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5C513CF21AEF0A50066F11D /* Category.swift */; };
+		B5C513D221AF757C0066F11D /* AddCatagoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5C513D121AF757C0066F11D /* AddCatagoryViewController.swift */; };
 		B5CAB21321A5911700BE1811 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5CAB21221A5911700BE1811 /* AppDelegate.swift */; };
 		B5CAB21521A5911700BE1811 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5CAB21421A5911700BE1811 /* HomeViewController.swift */; };
 		B5CAB21721A5911700BE1811 /* FavoriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5CAB21621A5911700BE1811 /* FavoriteViewController.swift */; };
@@ -22,7 +23,6 @@
 		B5CAB22A21A5911900BE1811 /* LoyaltyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5CAB22921A5911900BE1811 /* LoyaltyTests.swift */; };
 		B5CAB23521A5911900BE1811 /* LoyaltyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5CAB23421A5911900BE1811 /* LoyaltyUITests.swift */; };
 		B5CAB24521A5989400BE1811 /* MoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5CAB24421A5989400BE1811 /* MoreViewController.swift */; };
-		B5CAB24921A5C14100BE1811 /* AddCatagoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5CAB24821A5C14100BE1811 /* AddCatagoryViewController.swift */; };
 		FCC2380D6D63B1BF686B29CF /* Pods_Loyalty.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 90E1284033DD44EE6D13C495 /* Pods_Loyalty.framework */; };
 /* End PBXBuildFile section */
 
@@ -55,6 +55,7 @@
 		B5C513CA21AB8C860066F11D /* CardCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardCollectionViewCell.swift; sourceTree = "<group>"; };
 		B5C513CD21AEEDE10066F11D /* CategoryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryModel.swift; sourceTree = "<group>"; };
 		B5C513CF21AEF0A50066F11D /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
+		B5C513D121AF757C0066F11D /* AddCatagoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddCatagoryViewController.swift; sourceTree = "<group>"; };
 		B5CAB20F21A5911700BE1811 /* Loyalty.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Loyalty.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B5CAB21221A5911700BE1811 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B5CAB21421A5911700BE1811 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -70,7 +71,6 @@
 		B5CAB23421A5911900BE1811 /* LoyaltyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoyaltyUITests.swift; sourceTree = "<group>"; };
 		B5CAB23621A5911900BE1811 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B5CAB24421A5989400BE1811 /* MoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreViewController.swift; sourceTree = "<group>"; };
-		B5CAB24821A5C14100BE1811 /* AddCatagoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCatagoryViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,7 +111,7 @@
 		B5C513BC21A760470066F11D /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				B5CAB24821A5C14100BE1811 /* AddCatagoryViewController.swift */,
+				B5C513D121AF757C0066F11D /* AddCatagoryViewController.swift */,
 				B5C513C621AB6BB20066F11D /* CategoryViewController.swift */,
 				B5CAB21621A5911700BE1811 /* FavoriteViewController.swift */,
 				B5CAB21421A5911700BE1811 /* HomeViewController.swift */,
@@ -389,8 +389,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				B5CAB21721A5911700BE1811 /* FavoriteViewController.swift in Sources */,
-				B5CAB24921A5C14100BE1811 /* AddCatagoryViewController.swift in Sources */,
 				B5C513C721AB6BB20066F11D /* CategoryViewController.swift in Sources */,
+				B5C513D221AF757C0066F11D /* AddCatagoryViewController.swift in Sources */,
 				B5CAB24521A5989400BE1811 /* MoreViewController.swift in Sources */,
 				B5CAB21321A5911700BE1811 /* AppDelegate.swift in Sources */,
 				B5C513CE21AEEDE10066F11D /* CategoryModel.swift in Sources */,
