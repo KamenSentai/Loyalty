@@ -13,6 +13,7 @@ class FavoriteViewController: UIViewController, UICollectionViewDataSource, UICo
     
     var categories: [Category] = [Category]()
     var cardsFavorite: [[String: Any]] = [[:]]
+    var cardsDisplayed: [[String: Any]] = [[:]]
 
     @IBOutlet weak var pageTitle: UILabel!
     @IBOutlet weak var searchBar: SearchBar!
@@ -31,6 +32,7 @@ class FavoriteViewController: UIViewController, UICollectionViewDataSource, UICo
         
         let categoryModel = CategoryModel()
         self.cardsFavorite.removeAll()
+        self.cardsDisplayed.removeAll()
         categoryModel.fetchCategories { (categoriesFromJSON) in
             self.categories = categoriesFromJSON
             for category in self.categories {
@@ -45,6 +47,7 @@ class FavoriteViewController: UIViewController, UICollectionViewDataSource, UICo
                     }
                 }
             }
+            self.cardsDisplayed = self.cardsFavorite
             self.cardCollectionView.reloadData()
         }
         
@@ -59,19 +62,20 @@ class FavoriteViewController: UIViewController, UICollectionViewDataSource, UICo
     }
     
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-//        self.categoriesDisplayed.removeAll()
-//        if searchText == "" {
-//            self.categoriesDisplayed = self.categoriesAdded
-//        } else {
-//            let pattern = "\(searchText.lowercased())"
-//            for categoryAdded in self.categoriesAdded {
-//                let string = categoryAdded.category.lowercased()
-//                if string ~= pattern {
-//                    self.categoriesDisplayed.append(categoryAdded)
-//                }
-//            }
-//        }
-//        self.categoryCollectionView.reloadData()
+        self.cardsDisplayed.removeAll()
+        if searchText == "" {
+            self.cardsDisplayed = self.cardsFavorite
+        } else {
+            let pattern = "\(searchText.lowercased())"
+            for cardFavorite in self.cardsFavorite {
+                var string = cardFavorite["name"] as! String
+                string = string.lowercased()
+                if string ~= pattern {
+                    self.cardsDisplayed.append(cardFavorite)
+                }
+            }
+        }
+        self.cardCollectionView.reloadData()
     }
     
     func hexStringToUIColor (hex:String) -> UIColor {
@@ -97,13 +101,13 @@ class FavoriteViewController: UIViewController, UICollectionViewDataSource, UICo
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return self.cardsFavorite.count
+        return self.cardsDisplayed.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cardCollectionViewCell = cardCollectionView.dequeueReusableCell(withReuseIdentifier: "CardCollectionViewCell", for: indexPath) as! CardCollectionViewCell
         
-        let card = self.cardsFavorite[indexPath.row]
+        let card = self.cardsDisplayed[indexPath.row]
         
         cardCollectionViewCell.backgroundColor = UIColor.white
         cardCollectionViewCell.layer.cornerRadius = 10
