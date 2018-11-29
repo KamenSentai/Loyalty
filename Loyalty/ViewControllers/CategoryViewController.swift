@@ -43,6 +43,12 @@ class CategoryViewController: UIViewController, UICollectionViewDelegate, UIColl
 
     }
     
+    @IBAction func addCardAction(_ sender: Any) {
+        let storyboard : UIStoryboard = UIStoryboard(name: "Main", bundle : nil)
+        let addCategoryViewController = storyboard.instantiateViewController(withIdentifier: "AddCardViewController") as! AddCardViewController
+        navigationController?.pushViewController(addCategoryViewController, animated: true)
+    }
+    
     func hexStringToUIColor (hex:String) -> UIColor {
         var cString:String = hex.trimmingCharacters(in: .whitespacesAndNewlines).uppercased()
         

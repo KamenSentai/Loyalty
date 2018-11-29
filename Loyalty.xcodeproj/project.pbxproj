@@ -14,6 +14,7 @@
 		B5C513CE21AEEDE10066F11D /* CategoryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5C513CD21AEEDE10066F11D /* CategoryModel.swift */; };
 		B5C513D021AEF0A50066F11D /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5C513CF21AEF0A50066F11D /* Category.swift */; };
 		B5C513D221AF757C0066F11D /* AddCatagoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5C513D121AF757C0066F11D /* AddCatagoryViewController.swift */; };
+		B5C513D621AF795D0066F11D /* AddCardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5C513D521AF795D0066F11D /* AddCardViewController.swift */; };
 		B5CAB21321A5911700BE1811 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5CAB21221A5911700BE1811 /* AppDelegate.swift */; };
 		B5CAB21521A5911700BE1811 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5CAB21421A5911700BE1811 /* HomeViewController.swift */; };
 		B5CAB21721A5911700BE1811 /* FavoriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5CAB21621A5911700BE1811 /* FavoriteViewController.swift */; };
@@ -56,6 +57,7 @@
 		B5C513CD21AEEDE10066F11D /* CategoryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryModel.swift; sourceTree = "<group>"; };
 		B5C513CF21AEF0A50066F11D /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		B5C513D121AF757C0066F11D /* AddCatagoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddCatagoryViewController.swift; sourceTree = "<group>"; };
+		B5C513D521AF795D0066F11D /* AddCardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCardViewController.swift; sourceTree = "<group>"; };
 		B5CAB20F21A5911700BE1811 /* Loyalty.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Loyalty.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B5CAB21221A5911700BE1811 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B5CAB21421A5911700BE1811 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -111,6 +113,7 @@
 		B5C513BC21A760470066F11D /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				B5C513D521AF795D0066F11D /* AddCardViewController.swift */,
 				B5C513D121AF757C0066F11D /* AddCatagoryViewController.swift */,
 				B5C513C621AB6BB20066F11D /* CategoryViewController.swift */,
 				B5CAB21621A5911700BE1811 /* FavoriteViewController.swift */,
@@ -396,6 +399,7 @@
 				B5C513CE21AEEDE10066F11D /* CategoryModel.swift in Sources */,
 				B5C513C921AB7FDB0066F11D /* SearchBar.swift in Sources */,
 				B5C513BB21A6EAD90066F11D /* CategoryCollectionViewCell.swift in Sources */,
+				B5C513D621AF795D0066F11D /* AddCardViewController.swift in Sources */,
 				B5C513CB21AB8C860066F11D /* CardCollectionViewCell.swift in Sources */,
 				B5CAB21521A5911700BE1811 /* HomeViewController.swift in Sources */,
 				B5C513D021AEF0A50066F11D /* Category.swift in Sources */,

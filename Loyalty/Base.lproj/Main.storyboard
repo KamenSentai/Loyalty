@@ -195,8 +195,8 @@
                     <connections>
                         <outlet property="addButton" destination="jWh-mZ-i6J" id="OHB-vu-Vy8"/>
                         <outlet property="categoryPicker" destination="4Kx-9F-oBm" id="u1e-8W-7Eg"/>
-                        <outlet property="subtitleLabel" destination="n5u-G7-xde" id="UwB-5A-pdv"/>
-                        <outlet property="titleLabel" destination="5bk-DD-3AE" id="ZFo-uJ-dT4"/>
+                        <outlet property="headerLabel" destination="5bk-DD-3AE" id="u1M-rG-Bcu"/>
+                        <outlet property="infoLabel" destination="n5u-G7-xde" id="Yzb-IH-EME"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="si6-Mm-iad" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -384,6 +384,9 @@
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2jf-Uf-gG6">
                                 <rect key="frame" x="368" y="79" width="31.5" height="31.5"/>
+                                <connections>
+                                    <action selector="addCardAction:" destination="Gae-OL-A5R" eventType="touchUpInside" id="gG4-4x-5wK"/>
+                                </connections>
                             </button>
                             <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="BL2-CD-3un" customClass="SearchBar" customModule="Loyalty" customModuleProvider="target">
                                 <rect key="frame" x="20" y="145" width="374" height="50"/>
@@ -533,6 +536,66 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GQd-wd-QsW" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="4256.521739130435" y="-860.49107142857144"/>
+        </scene>
+        <!--Add Card View Controller-->
+        <scene sceneID="GCJ-0Q-cc5">
+            <objects>
+                <viewController storyboardIdentifier="AddCardViewController" id="BhB-ga-z8a" customClass="AddCardViewController" customModule="Loyalty" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="qnk-Vq-xbR">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ajouter une carte" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Aoq-sl-Skz">
+                                <rect key="frame" x="20" y="84" width="374" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nous vous offrons la posibilité d’ajouter une nouvelle carte avec une de nos enseignes partenaires" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zw8-zQ-6ns">
+                                <rect key="frame" x="40" y="120" width="334" height="61"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lrE-t1-ARO">
+                                <rect key="frame" x="40" y="652" width="334" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="cmP-V2-Md5"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Valider"/>
+                            </button>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="Zx1-Kb-rGV" customClass="SearchBar" customModule="Loyalty" customModuleProvider="target">
+                                <rect key="frame" x="20" y="221" width="374" height="56"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                        </subviews>
+                        <color key="backgroundColor" red="0.96078431369999995" green="0.97254901959999995" blue="0.98039215690000003" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="zw8-zQ-6ns" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Aoq-sl-Skz" secondAttribute="leading" constant="20" id="43v-FY-RnR"/>
+                            <constraint firstItem="Aoq-sl-Skz" firstAttribute="leading" secondItem="dih-Dy-sbS" secondAttribute="leading" constant="20" id="5vS-T6-TVa"/>
+                            <constraint firstItem="zw8-zQ-6ns" firstAttribute="trailing" relation="lessThanOrEqual" secondItem="Aoq-sl-Skz" secondAttribute="trailing" constant="-20" id="8zR-rg-KC3"/>
+                            <constraint firstItem="lrE-t1-ARO" firstAttribute="trailing" secondItem="zw8-zQ-6ns" secondAttribute="trailing" id="9gT-K9-vR7"/>
+                            <constraint firstItem="lrE-t1-ARO" firstAttribute="leading" secondItem="zw8-zQ-6ns" secondAttribute="leading" id="Ady-7Y-biv"/>
+                            <constraint firstItem="Zx1-Kb-rGV" firstAttribute="top" secondItem="zw8-zQ-6ns" secondAttribute="bottom" constant="40" id="Aix-mT-TAI"/>
+                            <constraint firstItem="dih-Dy-sbS" firstAttribute="bottom" secondItem="lrE-t1-ARO" secondAttribute="bottom" constant="160" id="UTZ-mD-9N9"/>
+                            <constraint firstItem="Zx1-Kb-rGV" firstAttribute="leading" secondItem="Aoq-sl-Skz" secondAttribute="leading" id="UmI-oY-e5u"/>
+                            <constraint firstItem="Zx1-Kb-rGV" firstAttribute="trailing" secondItem="Aoq-sl-Skz" secondAttribute="trailing" id="VtO-yb-qXt"/>
+                            <constraint firstItem="zw8-zQ-6ns" firstAttribute="top" secondItem="Aoq-sl-Skz" secondAttribute="bottom" constant="15" id="iq7-Za-qRv"/>
+                            <constraint firstItem="Aoq-sl-Skz" firstAttribute="top" secondItem="dih-Dy-sbS" secondAttribute="top" constant="40" id="itp-Nh-6p3"/>
+                            <constraint firstItem="dih-Dy-sbS" firstAttribute="trailing" secondItem="Aoq-sl-Skz" secondAttribute="trailing" constant="20" id="rW4-z1-4MG"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="dih-Dy-sbS"/>
+                    </view>
+                    <connections>
+                        <outlet property="addButton" destination="lrE-t1-ARO" id="iGa-Lm-Lfg"/>
+                        <outlet property="headerLabel" destination="Aoq-sl-Skz" id="4ss-yf-9dc"/>
+                        <outlet property="infoLabel" destination="zw8-zQ-6ns" id="r4E-kZ-DCE"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gyU-mX-08A" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5200" y="-860"/>
         </scene>
     </scenes>
     <resources>
